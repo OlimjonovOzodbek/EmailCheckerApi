@@ -16,9 +16,10 @@ namespace LoginChecker.Application.Service.Check2
             var res = await _checkService.EmailChecks.ToListAsync();
             foreach(var user in res)
             {
-                if (user.Email == useremail && user.Password == password && user.Code == code) return "Welcome to our Api";
+                if (user.Email == useremail && user.Password == password && user.Code == code) 
+                    return "Accepted";
             }
-            return "Something went wrong. Please try again";
+            return "ERROR";
         }
     }
 }
