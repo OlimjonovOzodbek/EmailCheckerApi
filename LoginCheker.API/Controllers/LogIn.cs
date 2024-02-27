@@ -15,7 +15,7 @@ namespace LoginCheker.API.Controllers
             _loginService = loginService;
         }
         [HttpPost]
-        public Task<string> Login(string username, string password)
+        public Task<string> Login([FromForm] string username, [FromForm] string password)
         {
            return _loginService.SendMessage(username, password);
         }

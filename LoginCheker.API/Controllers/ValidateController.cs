@@ -15,7 +15,7 @@ namespace LoginCheker.API.Controllers
             _checkService = checkService;
         }
         [HttpPost]
-        public async Task<string> Validate(string useremail, string password, string code)
+        public async Task<string> Validate([FromForm] string useremail, [FromForm] string password, [FromForm] string code)
         {
             return await _checkService.CheckAsync(useremail, password, code);
         }

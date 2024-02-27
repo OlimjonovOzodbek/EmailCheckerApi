@@ -15,7 +15,7 @@ namespace LoginCheker.API.Controllers
             _registerService = register;
         }
         [HttpPost]
-        public async Task<string> Register2(string username, string password)
+        public async Task<string> Register2([FromForm]string username,[FromForm] string password)
         {
             return await _registerService.Register(username, password);
         }
