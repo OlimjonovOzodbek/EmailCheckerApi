@@ -18,7 +18,8 @@ namespace LoginChecker.Application.Service.Registers
             var emails = await _context.Users.ToListAsync();
             foreach (var user in emails)
             {
-                if(user.UserEmail == useremail) return true;
+                if(user.UserEmail == useremail) 
+                    return true;
             }
             return false;
         }

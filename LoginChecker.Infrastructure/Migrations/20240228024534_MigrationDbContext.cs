@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LoginChecker.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Check : Migration
+    public partial class MigrationDbContext : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
